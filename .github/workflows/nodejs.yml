@@ -13,6 +13,7 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 9999
 
     strategy:
       matrix:
@@ -31,9 +32,12 @@ jobs:
         with:
           node-version: '14.16.0'
 
-      - name: npm run install
+      - name: npm i -g yarn
         run: |
-          npm i
+          npm i -g yarn
+      - name: yarn
+        run: |
+          yarn
       - name: npm run lint
         run: |
           npm run lint
