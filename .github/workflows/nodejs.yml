@@ -3,12 +3,12 @@ name: Arkemys Client Next CI
 on:
   push:
     branches:
-      - master
+      - main
       - releases
       - native-refactor
   pull_request:
     branches:
-      - master
+      - main
       - releases
 jobs:
   build:

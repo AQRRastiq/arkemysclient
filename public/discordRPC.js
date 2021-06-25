@@ -12,7 +12,7 @@ exports.initRPC = () => {
     state: 'Ne fait rien',
     startTimestamp: Math.floor(Date.now() / 1000),
     largeImageKey: 'default_big',
-    largeImageText: 'Arkemys Client - Un Client Minecraft pour le PvP',
+    largeImageText: 'Arkemys Client - LE Client Minecraft pour le PvP',
     instance: false
   };
 
