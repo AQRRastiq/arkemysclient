@@ -23,7 +23,7 @@ const JavaSetup = () => {
   const [choice, setChoice] = useState(null);
   return (
     <Modal
-      title="Java Setup"
+      title="Installation de Java"
       css={`
         height: 380px;
         width: 600px;
@@ -45,7 +45,7 @@ const JavaSetup = () => {
                 margin-bottom: 20px;
               `}
             >
-              Java Setup
+              Installation de Java
             </div>
             <div
               css={`
@@ -54,9 +54,7 @@ const JavaSetup = () => {
                 text-align: justify;
               `}
             >
-              For an optimal experience, we suggest letting us take care of java
-              for you. Only manually manage java if you know what you&apos;re
-              doing, it may result in Arkemys Client not working!
+              Pour une expérience optimale, nous vous conseillons de laisser le Arkemys Client installer Jav pour vous à moins que vous sachiez ce que vous faites.
             </div>
             <div
               css={`
@@ -78,7 +76,7 @@ const JavaSetup = () => {
                     setChoice(0);
                   }}
                 >
-                  Automatic Setup
+                  Installation automatique
                 </Button>
               </div>
               <div>
@@ -92,7 +90,7 @@ const JavaSetup = () => {
                     setChoice(1);
                   }}
                 >
-                  Manual Setup
+                  Installation manuelle
                 </Button>
               </div>
             </div>
@@ -109,7 +107,7 @@ const JavaSetup = () => {
                 margin-bottom: 20px;
               `}
             >
-              {choice === 0 ? 'Automatic' : 'Manual'} Setup
+              Installation {choice === 0 ? 'Automatique' : 'Manuelle'}
             </div>
             {choice === 0 ? (
               <AutomaticSetup />
@@ -149,8 +147,7 @@ const ManualSetup = ({ setChoice }) => {
           font-size: 18px;
         `}
       >
-        Select your java executable. We strongly suggest Java8, since any other
-        version won&apos;t completely work with modded Minecraft
+        Selectionnez votre exécutable Java (le chemin devrait se terminer par bin/java.exe). Nous vous conseillons Java 8 car les autres versions pourraient ne pas fonctionner avec Minecraft.
       </div>
       <div
         css={`
@@ -159,7 +156,7 @@ const ManualSetup = ({ setChoice }) => {
         `}
       >
         <Input
-          placeholder="Select your java executable"
+          placeholder="Selectionner l'exécutable Java"
           onChange={e => setJavaPath(e.target.value)}
           value={javaPath}
         />
@@ -182,7 +179,7 @@ const ManualSetup = ({ setChoice }) => {
         `}
       >
         <Button type="primary" onClick={() => setChoice(0)}>
-          Go to Automatic Setup instead
+          Passer à l'installation automatique
         </Button>
         <Button
           type="danger"
@@ -192,7 +189,7 @@ const ManualSetup = ({ setChoice }) => {
             dispatch(closeModal());
           }}
         >
-          Continue with custom java
+          Continuer avec votre Java
         </Button>
       </div>
     </div>
@@ -201,7 +198,7 @@ const ManualSetup = ({ setChoice }) => {
 
 const AutomaticSetup = () => {
   const [downloadPercentage, setDownloadPercentage] = useState(null);
-  const [currentStep, setCurrentStep] = useState('Downloading Java');
+  const [currentStep, setCurrentStep] = useState('Téléchargement de Java');
   const javaManifest = useSelector(state => state.app.javaManifest);
   const userData = useSelector(state => state.userData);
   const tempFolder = useSelector(_getTempPath);
@@ -230,7 +227,7 @@ const AutomaticSetup = () => {
 
     const totalSteps = process.platform !== 'win32' ? 2 : 1;
 
-    setCurrentStep(`Extracting 1 / ${totalSteps}`);
+    setCurrentStep(`Extraction de 1 / ${totalSteps}`);
     const sevenZipPath = await get7zPath();
     const firstExtraction = extractFull(downloadLocation, tempFolder, {
       $bin: sevenZipPath,
@@ -256,7 +253,7 @@ const AutomaticSetup = () => {
       ipcRenderer.invoke('update-progress-bar', -1);
       setDownloadPercentage(null);
       await new Promise(resolve => setTimeout(resolve, 500));
-      setCurrentStep(`Extracting 2 / ${totalSteps}`);
+      setCurrentStep(`Extraction de 2 / ${totalSteps}`);
       const tempTarName = path.join(
         tempFolder,
         path.basename(url).replace('.tar.gz', '.tar')
@@ -298,7 +295,7 @@ const AutomaticSetup = () => {
     }
 
     dispatch(updateJavaPath(null));
-    setCurrentStep(`Java is ready!`);
+    setCurrentStep(`Java est prêt !`);
     ipcRenderer.invoke('update-progress-bar', -1);
     setDownloadPercentage(null);
     await new Promise(resolve => setTimeout(resolve, 2000));

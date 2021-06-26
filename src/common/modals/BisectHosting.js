@@ -15,7 +15,7 @@ const BisectHosting = () => {
         font-size: 10px;
         line-height: 1.8;
       `}
-      title="We teamed up with BisectHosting"
+      title="BisectHosting"
     >
       <Container>
         <BisectHostingLogo size={70} hover />
@@ -24,7 +24,7 @@ const BisectHosting = () => {
             margin-top: 20px;
           `}
         >
-          Grab a server from our official partner{' '}
+          Prenez un serveur avec notre partenaire officiel{' '}
           <span
             css={`
               font-weight: 800;
@@ -32,8 +32,7 @@ const BisectHosting = () => {
           >
             BisectHosting
           </span>{' '}
-          <span>for effortless modded server installs and updates.</span> New
-          customers can save{' '}
+          <span>Pour des serveurs sans faire d'effort.</span> Les nouveaux client peuvent économiser{' '}
           <span
             css={`
               color: ${props => props.theme.palette.colors.green};
@@ -41,7 +40,7 @@ const BisectHosting = () => {
           >
             25%
           </span>{' '}
-          off their first month using the promo code{' '}
+          pour leur premier mois avec le code{' '}
           <span
             css={`
               color: ${props => props.theme.palette.colors.green};
@@ -49,7 +48,7 @@ const BisectHosting = () => {
           >
             GDL
           </span>{' '}
-          at checkout.
+          au checkout.
         </h2>
         <a href="https://bisecthosting.com/gdl">
           <Button
@@ -58,7 +57,7 @@ const BisectHosting = () => {
               margin-top: 25px;
             `}
           >
-            Go to BisectHosting.com &nbsp;
+            Aller sur BisectHosting.com &nbsp;
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </Button>
         </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 function BrowserRoot() {
-  return <div>This is a browser app</div>;
+  return <div>Ceci est une appli de navigateur.</div>;
 }
 
 export default BrowserRoot;

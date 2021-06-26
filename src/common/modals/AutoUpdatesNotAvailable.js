@@ -12,14 +12,13 @@ const AutoUpdatesNotAvailable = () => {
       title="Auto Updates Not Available"
     >
       <Container>
-        <div>Auto updates are not available on this platform.</div>
+        <div>Les mises à jour automatiques ne sont pas disponibles sur cette platforme.</div>
         <div
           css={`
             margin-top: 20px;
           `}
         >
-          Please, update Arkemys Client through your package manager or download the
-          new version from our website <a href="https://github.com/AQRRastiq/arkemysclient">here</a>
+          Veuillez télécharger la nouvelle version <a href="https://github.com/AQRRastiq/arkemysclient">ici</a>
         </div>
       </Container>
     </Modal>

@@ -133,7 +133,7 @@ export default function MyAccountPreferences() {
           text-align: left;
         `}
       >
-        Autodetect Java Path&nbsp; <FontAwesomeIcon icon={faJava} />
+        Détecter automatiquement le chemin vers Java&nbsp; <FontAwesomeIcon icon={faJava} />
         <a
           css={`
             margin-left: 30px;
@@ -142,7 +142,7 @@ export default function MyAccountPreferences() {
             dispatch(openModal('JavaSetup'));
           }}
         >
-          Run Java Setup again
+          Refaire l'installation Java
         </a>
       </Title>
       <AutodetectPath>
@@ -151,8 +151,7 @@ export default function MyAccountPreferences() {
             text-align: left;
           `}
         >
-          Disable this to specify a custom java path to use instead of using
-          openJDK shipped with Arkemys Client. Please select the java.exe binary
+          Désactiver ceci pour pouvoir utiliser un chemin personnalisé vers Java (le chemin doit se terminer par bin/java.exe).
         </Paragraph>
         <Switch
           color="primary"
@@ -220,7 +219,7 @@ export default function MyAccountPreferences() {
             margin-bottom: 20px;
           `}
         >
-          Game Resolution&nbsp; <FontAwesomeIcon icon={faDesktop} />
+          Résolution de jeu&nbsp; <FontAwesomeIcon icon={faDesktop} />
         </Title>
         <Paragraph
           css={`
@@ -229,12 +228,12 @@ export default function MyAccountPreferences() {
             margin: 0;
           `}
         >
-          Select the initial game resolution in pixels (width x height)
+          Selectionner la résolution initiale (largeur x hauteur)
         </Paragraph>
         <ResolutionInputContainer>
           <div>
             <Input
-              placeholder="width"
+              placeholder="Largeur"
               value={mcResolution.width}
               onChange={e => {
                 const w = parseInt(e.target.value, 10);
@@ -243,7 +242,7 @@ export default function MyAccountPreferences() {
             />
             &nbsp;X&nbsp;
             <Input
-              placeholder="Height"
+              placeholder="Hauteur"
               value={mcResolution.height}
               onChange={e => {
                 const h = parseInt(e.target.value, 10);
@@ -290,7 +289,7 @@ export default function MyAccountPreferences() {
             margin-bottom: 20px;
           `}
         >
-          Java Memory&nbsp; <FontAwesomeIcon icon={faMemory} />
+          Mémoire Java&nbsp; <FontAwesomeIcon icon={faMemory} />
         </Title>
         <Paragraph
           css={`
@@ -299,7 +298,7 @@ export default function MyAccountPreferences() {
             margin: 0;
           `}
         >
-          Select the preferred amount of memory to use when launching the game
+          Selectionner la mémoire utilisé par Java pour lancer votre instance
         </Paragraph>
         <Slider
           css={`
@@ -324,14 +323,14 @@ export default function MyAccountPreferences() {
             text-align: left;
           `}
         >
-          Java Custom Arguments &nbsp; <FontAwesomeIcon icon={faList} />
+          Arguments personnalisés Java &nbsp; <FontAwesomeIcon icon={faList} />
         </Title>
         <Paragraph
           css={`
             text-align: left;
           `}
         >
-          Select the preferred custom arguments to use when launching the game
+          Sélectionnez les arguments à ajouter lors du lancement du jeu
         </Paragraph>
         <div
           css={`

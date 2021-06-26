@@ -279,8 +279,8 @@ const Instance = ({ instanceName }) => {
                     {!isPlaying.initialized && <div className="spinner" />}
                   </div>
                 )}
-                {isInQueue && 'In Queue'}
-                {!isInQueue && !isPlaying && 'PLAY'}
+                {isInQueue && 'Dans la queue'}
+                {!isInQueue && !isPlaying && 'JOUER'}
               </>
             )}
           </HoverContainer>
@@ -301,7 +301,7 @@ const Instance = ({ instanceName }) => {
                   margin-right: 10px;
                 `}
               />
-              Kill
+              Arrêter
             </MenuItem>
           )}
           <MenuItem disabled={Boolean(isInQueue)} onClick={manageInstance}>
@@ -311,7 +311,7 @@ const Instance = ({ instanceName }) => {
                 margin-right: 10px;
               `}
             />
-            Manage
+            Modifier
           </MenuItem>
           <MenuItem onClick={openFolder}>
             <FontAwesomeIcon
@@ -320,7 +320,7 @@ const Instance = ({ instanceName }) => {
                 margin-right: 10px;
               `}
             />
-            Open Folder
+            Ouvrir le dossier
           </MenuItem>
 
           {/* // TODO - Support other export options besides curseforge forge. */}
@@ -342,7 +342,7 @@ const Instance = ({ instanceName }) => {
                 width: 16px !important;
               `}
             />
-            Export Pack
+            Exporter
           </MenuItem>
           <MenuItem divider />
           <MenuItem
@@ -355,7 +355,7 @@ const Instance = ({ instanceName }) => {
                 margin-right: 10px;
               `}
             />
-            Delete
+            Supprimer
           </MenuItem>
         </ContextMenu>
       </Portal>

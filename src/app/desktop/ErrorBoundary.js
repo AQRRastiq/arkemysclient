@@ -52,7 +52,7 @@ export default class ErrorBoundary extends React.Component {
               color: ${props => props.theme.palette.text.primary};
             `}
           >
-            WE’RE SSSSSSORRY. Arkemys Client ran into a creeper and blew up..
+            NOUS SSSSSSSOMMES DÉSOLÉ. Arkemys s'est dirigé vers un Creeper et a explosé...
           </h1>
           <div
             css={`
@@ -71,7 +71,7 @@ export default class ErrorBoundary extends React.Component {
               margin-top: 30px;
             `}
           >
-            Restart Arkemys Client
+            Relancer Arkemys
           </Button>
         </div>
       );

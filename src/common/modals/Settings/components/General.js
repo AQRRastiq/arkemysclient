@@ -322,7 +322,7 @@ const General = () => {
   return (
     <MyAccountPrf>
       <PersonalData>
-        <MainTitle>General</MainTitle>
+        <MainTitle>Général</MainTitle>
         <PersonalDataContainer>
           {profileImage ? (
             <ProfileImage src={`data:image/jpeg;base64,${profileImage}`} />
@@ -336,7 +336,7 @@ const General = () => {
             `}
           >
             <UsernameContainer>
-              Username <br />
+              Nom d'utilisateur <br />
               <Username>{currentAccount.selectedProfile.name}</Username>
             </UsernameContainer>
             <UuidContainer>
@@ -371,15 +371,14 @@ const General = () => {
       </PersonalData>
       <Hr />
       <ReleaseChannel>
-        <Title>Release Channel</Title>
+        <Title>Salon des versions</Title>
         <div>
           <div
             css={`
               width: 400px;
             `}
           >
-            Stable updates once a month, beta does update more often but it may
-            have more bugs.
+            Il y a moins de versions stables que de versions beta mais les versions en beta peuvent avoir plus de bugs.
           </div>
           <Select
             css={`
@@ -403,7 +402,7 @@ const General = () => {
       </ReleaseChannel>
       <Hr />
       <Title>
-        Concurrent Downloads &nbsp; <FontAwesomeIcon icon={faTachometerAlt} />
+        Téléchargement concurrents &nbsp; <FontAwesomeIcon icon={faTachometerAlt} />
       </Title>
       <ParallelDownload>
         <p
@@ -412,8 +411,7 @@ const General = () => {
             width: 400px;
           `}
         >
-          Select the number of concurrent downloads. If you have a slow
-          connection, select max 3
+          Selectionner le maximum de téléchargement concurrents. Si votre internet est lent, sélectionnez 3
         </p>
 
         <Select
@@ -435,40 +433,12 @@ const General = () => {
         </Select>
       </ParallelDownload>
       <Hr />
-      <Title>
-        Preferred Curse Release Channel &nbsp; <FontAwesomeIcon icon={faFire} />
-      </Title>
-      <ParallelDownload>
-        <p
-          css={`
-            margin: 0;
-            width: 400px;
-          `}
-        >
-          Select the preferred release channel for downloading Curse projects.
-          This also applies for mods update.
-        </p>
-        <Select
-          css={`
-            width: 100px;
-            text-align: start;
-          `}
-          onChange={e => dispatch(updateCurseReleaseChannel(e))}
-          value={curseReleaseChannel}
-          virtual={false}
-        >
-          <Select.Option value={1}>Stable</Select.Option>
-          <Select.Option value={2}>Beta</Select.Option>
-          <Select.Option value={3}>Alpha</Select.Option>
-        </Select>
-      </ParallelDownload>
-      <Hr />
       <Title
         css={`
           margin-top: 0px;
         `}
       >
-        Discord Integration &nbsp; <FontAwesomeIcon icon={faDiscord} />
+        Intégration de Discord &nbsp; <FontAwesomeIcon icon={faDiscord} />
       </Title>
       <DiscordRpc>
         <p
@@ -476,8 +446,7 @@ const General = () => {
             width: 350px;
           `}
         >
-          Enable / disable Discord Integration. This displays what you are
-          playing in Discord.
+          Activer / Désactiver la Disord RPC. Ceci affiche à quoi vous jouez.
         </p>
         <Switch
           onChange={e => {
@@ -497,7 +466,7 @@ const General = () => {
           margin-top: 0px;
         `}
       >
-        Minecraft News &nbsp; <FontAwesomeIcon icon={faNewspaper} />
+        News de Minecraft &nbsp; <FontAwesomeIcon icon={faNewspaper} />
       </Title>
       <DiscordRpc>
         <p
@@ -505,7 +474,7 @@ const General = () => {
             width: 350px;
           `}
         >
-          Enable / disable Minecraft news.
+          Activer / Désactiver les News de Minecraft.
         </p>
         <Switch
           onChange={e => {
@@ -520,7 +489,7 @@ const General = () => {
           margin-top: 0px;
         `}
       >
-        Hide Launcher While Playing &nbsp; <FontAwesomeIcon icon={faPlay} />
+        Cacher le launcher quand une instance est en cours d'exécution &nbsp; <FontAwesomeIcon icon={faPlay} />
       </Title>
       <DiscordRpc
         css={`
@@ -532,8 +501,7 @@ const General = () => {
             width: 500px;
           `}
         >
-          Automatically hide the launcher when launching an instance. You will
-          still be able to open it from the icon tray
+          Cache automatiquement la launcher au lancement d'une instance
         </p>
         <Switch
           onChange={e => {
@@ -548,7 +516,7 @@ const General = () => {
           margin-top: 0px;
         `}
       >
-        Potato PC Mode &nbsp; <FontAwesomeIcon icon={faToilet} />
+        Mode PC de Crotte &nbsp; <FontAwesomeIcon icon={faToilet} />
       </Title>
       <DiscordRpc
         css={`
@@ -560,8 +528,7 @@ const General = () => {
             width: 500px;
           `}
         >
-          You got a potato PC? Don&apos;t worry! We got you covered. Enable this
-          and all animations and special effects will be disabled
+          Vous avez un PC de Crotte ? Ne vous inquietez pas, nous avons créés cette options pour vous. Activez cette option et toutes les animations et effets spéciaux seront désactivés.
         </p>
         <Switch
           onChange={e => {
@@ -577,7 +544,7 @@ const General = () => {
           float: left;
         `}
       >
-        Clear Shared Data&nbsp; <FontAwesomeIcon icon={faTrash} />
+        Vider les données partagées&nbsp; <FontAwesomeIcon icon={faTrash} />
       </Title>
       <div
         css={`
@@ -598,23 +565,22 @@ const General = () => {
             width: 500px;
           `}
         >
-          Deletes all the shared files between instances. Doing this will result
-          in the complete loss of the instances data
+          Vide toutes les données partagées entre les instances
         </p>
         <Button
           onClick={() => {
             dispatch(
               openModal('ActionConfirmation', {
-                message: 'Are you sure you want to delete shared data?',
+                message: 'Voulez-vous vraiment vider les données partagées ?',
                 confirmCallback: clearSharedData,
-                title: 'Confirm'
+                title: 'Confirmer'
               })
             );
           }}
           disabled={disableInstancesActions}
           loading={deletingInstances}
         >
-          Clear
+          Vider
         </Button>
       </div>
       <Hr />
@@ -626,7 +592,7 @@ const General = () => {
             float: left;
           `}
         >
-          User Data Path&nbsp; <FontAwesomeIcon icon={faFolder} />
+          Chemin vers les données d'utilsateur&nbsp; <FontAwesomeIcon icon={faFolder} />
           <a
             css={`
               margin-left: 30px;
@@ -637,7 +603,7 @@ const General = () => {
               setDataPath(appDataPath);
             }}
           >
-            Reset Path
+            Réinitialiser le chemin
           </a>
         </Title>
         <div
@@ -686,7 +652,7 @@ const General = () => {
             }
             loading={loadingMoveUserData}
           >
-            Apply & Restart
+            Appliquer & Redémarrer le launcher
           </Button>
         </div>
         <div
@@ -701,7 +667,7 @@ const General = () => {
               setMoveUserData(e.target.checked);
             }}
           >
-            Copy current data to the new directory
+            Copier les données actuelles vers le nouveau dossier
           </Checkbox>
         </div>
       </CustomDataPathContainer>
@@ -730,8 +696,8 @@ const General = () => {
         </div>
         <p>
           {updateAvailable
-            ? 'There is an update available to be installed. Click on update to install it and restart the launcher'
-            : 'You’re currently on the latest version. We automatically check for updates and we will inform you whenever one is available'}
+            ? 'Une mise à jour est disponible ! Cliquez sur "Mettre à jour" pour installer la mise à jour'
+            : 'Vous êtes sur la dernière version.'}
         </p>
         <div
           css={`
@@ -751,7 +717,7 @@ const General = () => {
               `}
               type="primary"
             >
-              Update &nbsp;
+              Mettre à jour &nbsp;
               <FontAwesomeIcon icon={faDownload} />
             </Button>
           ) : (
@@ -762,7 +728,7 @@ const General = () => {
                 padding: 6px 8px;
               `}
             >
-              Up to date
+              Mis à jour
             </div>
           )}
         </div>

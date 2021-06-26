@@ -43,7 +43,7 @@ const AddAccount = ({ username }) => {
             height: 80px;
           `}
         >
-          Mojang Login
+          Connection via Mojang
         </h1>
         <StyledInput
           disabled={!!username}
@@ -53,13 +53,13 @@ const AddAccount = ({ username }) => {
         />
         <StyledInput
           type="password"
-          placeholder="Password"
+          placeholder="Mot de passe"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
       </FormContainer>
       <FormContainer>
-        <StyledButton onClick={addAccount}>Add Account</StyledButton>
+        <StyledButton onClick={addAccount}>Ajouter ce compte</StyledButton>
       </FormContainer>
     </Container>
   );
@@ -72,10 +72,10 @@ const AddAccount = ({ username }) => {
             height: 80px;
           `}
         >
-          Microsoft Login
+          Connection via Microsoft
         </h1>
         <FormContainer>
-          <h2>External Login</h2>
+          <h2>Connection externe</h2>
           {loginFailed ? (
             <>
               <LoginFailMessage>{loginFailed?.message}</LoginFailMessage>
@@ -85,7 +85,7 @@ const AddAccount = ({ username }) => {
                 `}
                 onClick={addMicrosoftAccount}
               >
-                Retry
+                Réessayer
               </StyledButton>
             </>
           ) : (
@@ -114,7 +114,7 @@ const AddAccount = ({ username }) => {
             key={ACCOUNT_MOJANG}
             onClick={() => setAccountType(ACCOUNT_MOJANG)}
           >
-            Mojang Account
+            Compte Mojang
           </StyledAccountMenuItem>
           <StyledAccountMenuItem
             key={ACCOUNT_MICROSOFT}
@@ -123,7 +123,7 @@ const AddAccount = ({ username }) => {
               addMicrosoftAccount();
             }}
           >
-            Microsoft Account
+            Compte Microsoft
           </StyledAccountMenuItem>
         </Menu>
         {accountType === ACCOUNT_MOJANG ? renderAddMojangAccount() : null}

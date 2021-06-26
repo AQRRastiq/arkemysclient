@@ -41,8 +41,8 @@ const middleware = store => next => action => {
         // eslint-disable-next-line
         notification.open({
           key: 'nsfwNotWorking',
-          message: 'NSFW Error',
-          description: 'Node Sentinel File Watcher could not be initialized',
+          message: 'Erreur NSFW',
+          description: 'Node Sentinel File Watcher n\'a pas pu être initialisé',
           top: 47,
           duration: 10
         });

@@ -195,7 +195,7 @@ const InstancesMigration = () => {
         height: 500px;
         width: 550px;
       `}
-      title="Instances Migration"
+      title="Migration d'instance"
       header={false}
     >
       <Container>
@@ -211,8 +211,8 @@ const InstancesMigration = () => {
             margin-top: 20px;
           `}
         >
-          Importing {totalInstances} Instances -{' '}
-          {Object.keys(downloadQueue).length} Left
+          Importation de {totalInstances} instance(s) -{' '}
+          {Object.keys(downloadQueue).length} restantes
         </div>
         <div
           css={`
@@ -221,7 +221,7 @@ const InstancesMigration = () => {
             color: ${props => props.theme.palette.text.secondary};
           `}
         >
-          Please, do NOT close Arkemys Client.
+          S'il vous plaît, ne fermez pas le Arkemys Client.
         </div>
         <div
           css={`
@@ -232,7 +232,7 @@ const InstancesMigration = () => {
         >
           {!copying
             ? `${currentDownloadItem?.status} ${currentDownloadItem?.percentage}%`
-            : `Copying files... ${parseInt(
+            : `Copie des fichiers... ${parseInt(
                 (copiedFiles * 100) / totalFiles,
                 10
               )}%`}

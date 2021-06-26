@@ -272,7 +272,7 @@ export default function ThirdStep({
                   {isCompleted ? (
                     <div>
                       <h1>
-                        All Done!{' '}
+                        Terminé !{' '}
                         <FontAwesomeIcon
                           icon={faCheck}
                           css={`
@@ -288,12 +288,12 @@ export default function ThirdStep({
                             margin-top: 20px;
                           `}
                         >
-                          Go Back To Instances
+                          Revenir aux instances
                         </Button>
                       </div>
                     </div>
                   ) : (
-                    <h2>We&apos;re doing some magical stuff</h2>
+                    <h2>Nous sommes en train de faire des choses magiques</h2>
                   )}
                 </div>
               </div>

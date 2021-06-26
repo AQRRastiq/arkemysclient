@@ -57,7 +57,7 @@ const McVersionChanger = ({ instanceName, defaultValue }) => {
 
   return (
     <Modal
-      title="Minecraft Version Changer"
+      title="Changement de version Minecraft"
       css={`
         height: 380px;
         width: 600px;
@@ -85,7 +85,7 @@ const McVersionChanger = ({ instanceName, defaultValue }) => {
                   margin-bottom: 10px;
                 `}
               >
-                DISCLAIMER
+                DISCLAIMER (en anglais car flemme de le traduire)
               </div>
               <div>
                 Changing modloader (forge -&gt; fabric...) will result in the
@@ -100,7 +100,7 @@ const McVersionChanger = ({ instanceName, defaultValue }) => {
           defaultValue={patchedDefaultValue}
           onChange={setSelectedVersion}
           allowClear={false}
-          placeholder="Select a version"
+          placeholder="Choisir une version"
           size="large"
           css={`
             width: 400px;

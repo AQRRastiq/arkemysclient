@@ -127,7 +127,7 @@ const Modpack = ({ modpackId, instanceName, manifest, fileID }) => {
   const handleChange = value => setSelectedIndex(value);
   return (
     <Container>
-      Installed version: {versionName}
+      Version installée: {versionName}
       <div
         css={`
           display: flex;
@@ -209,7 +209,7 @@ const Modpack = ({ modpackId, instanceName, manifest, fileID }) => {
           dispatch(closeModal());
         }}
       >
-        Switch Version
+        Changer de version
       </Button>
     </Container>
   );

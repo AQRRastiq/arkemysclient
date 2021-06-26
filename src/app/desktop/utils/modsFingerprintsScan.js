@@ -15,7 +15,7 @@ const modsFingerprintsScan = async instancesPath => {
       const config = await fse.readJSON(configPath);
 
       if (!config.loader) {
-        throw new Error(`Config for ${instance} could not be parsed`);
+        throw new Error(`La configuration de ${instance} n'a pas pu être analysée`);
       }
 
       const modsFolder = path.join(instancesPath, instance, 'mods');

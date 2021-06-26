@@ -148,7 +148,7 @@ const Import = ({
   return (
     <Container>
       <div>
-        Local file or link to a direct download
+        Fichier local ou lien vers un .zip
         <div
           css={`
             display: flex;
@@ -157,7 +157,7 @@ const Import = ({
         >
           <Input
             disabled={loading}
-            placeholder="http://.../file.zip"
+            placeholder="http://.../fichier.zip"
             value={localValue}
             onChange={e => setLocalValue(e.target.value)}
             css={`
@@ -185,7 +185,7 @@ const Import = ({
               transparentize(0.7, props.theme.palette.grey[700])};
           `}
         >
-          {error && 'There was an issue while importing.'}
+          {error && 'Il y a eu une erreur pendant l\'importation.'}
         </div>
       </div>
     </Container>

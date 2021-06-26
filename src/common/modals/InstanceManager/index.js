@@ -141,14 +141,14 @@ const InstanceBackground = styled.div`
 `;
 
 const menuEntries = {
-  overview: { name: 'Overview', component: Overview },
+  overview: { name: 'Aperçu', component: Overview },
   mods: { name: 'Mods', component: Mods },
   modpack: { name: 'Modpack', component: Modpack },
   notes: { name: 'Notes', component: Notes },
-  resourcePacks: { name: 'Resource Packs', component: ResourcePacks },
+  resourcePacks: { name: 'Packs de Ressources', component: ResourcePacks },
   // resourcePacks: { name: "Resource Packs", component: Overview },
   // worlds: { name: "Worlds", component: Overview },
-  screenshots: { name: 'Screenshots', component: Screenshots }
+  screenshots: { name: 'Captures d\'écran', component: Screenshots }
   // settings: { name: "Settings", component: Overview },
   // servers: { name: "Servers", component: Overview }
 };
@@ -231,7 +231,7 @@ const InstanceManager = ({ instanceName }) => {
         width: 85%;
         max-width: 1500px;
       `}
-      title={`Instance Manager - ${instanceName}`}
+      title={`Modification d'instance - ${instanceName}`}
       removePadding
     >
       <Container>
@@ -239,7 +239,7 @@ const InstanceManager = ({ instanceName }) => {
           <SideMenu>
             <InstanceBackground onClick={openFileDialog} imagePath={background}>
               <Overlay />
-              <p>Change Icon</p>
+              <p>Changer l'icône</p>
               {background && (
                 <FontAwesomeIcon
                   icon={faTimesCircle}

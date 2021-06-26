@@ -484,7 +484,7 @@ const Row = memo(({ index, style, data }) => {
                 margin-right: 10px;
               `}
             />
-            Copy Name
+            Copier le nom
           </MenuItem>
         </ContextMenu>
       </Portal>
@@ -678,7 +678,7 @@ const Mods = ({ instanceName }) => {
         }}
         disabled={!hasModUpdates}
       >
-        Update all mods
+        Mettre à jour tout les mods
       </Menu.Item>
     </Menu>
   );
@@ -770,7 +770,7 @@ const Mods = ({ instanceName }) => {
           css={`
             width: 200px;
           `}
-          placeholder={`Search ${mods.length} mods`}
+          placeholder={`Chercher parmi ${mods.length} mods`}
         />
       </Header>
       <div
@@ -807,7 +807,7 @@ const Mods = ({ instanceName }) => {
                   `}
                   onDragLeave={e => e.stopPropagation()}
                 >
-                  <CopyTitle>Copy</CopyTitle>
+                  <CopyTitle>Copier</CopyTitle>
                   <DragArrow icon={faArrowDown} size="3x" />
                 </div>
               )}
@@ -815,7 +815,7 @@ const Mods = ({ instanceName }) => {
           )}
         </Transition>
         {mods.length === 0 && (
-          <NotItemsAvailable>No Mods Available</NotItemsAvailable>
+          <NotItemsAvailable>Aucun mod</NotItemsAvailable>
         )}
         <AutoSizer>
           {({ height, width }) => (

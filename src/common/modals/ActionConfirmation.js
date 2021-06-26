@@ -75,7 +75,7 @@ export default function ActionConfirmation({
               applyChoice('confirm', confirmCallback, fileName, dispatch, delay)
             }
           >
-            Confirm
+            Confirmer
           </Button>
         </Buttons>
       </Container>

@@ -33,9 +33,9 @@ const Instances = () => {
         instances.map(i => <Instance key={i.name} instanceName={i.name} />)
       ) : (
         <NoInstance>
-          No Instance has been installed
+          Aucune instance n'est installée
           <SubNoInstance>
-            Click on the icon in the bottom left corner to add new instances
+            Cliquez sur le plus en bas à gauche pour ajouter une nouvelle instance.
           </SubNoInstance>
         </NoInstance>
       )}

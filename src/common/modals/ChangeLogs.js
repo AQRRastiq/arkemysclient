@@ -20,7 +20,7 @@ const ChangeLogs = () => {
         height: 500px;
         width: 650px;
       `}
-      title={`What's new in ${version}`}
+      title={`Quoi de neuf en ${version} ?`}
     >
       <Container>
         {/* <Section>
@@ -48,11 +48,13 @@ const ChangeLogs = () => {
               color: ${props => props.theme.palette.colors.red};
             `}
           >
-            <span>Bug Fixes</span>
+            <span>Fixs de bugs</span>
           </SectionTitle>
           <div>
             <ul>
-              <li>Various QoL fixes.</li>
+              <li>Traduction des phrases.</li>
+              <li>Changement du manifest des version de Minecraft.</li>
+              <li>Changement du logo.</li>
             </ul>
           </div>
         </Section>
@@ -62,11 +64,10 @@ const ChangeLogs = () => {
               color: ${props => props.theme.palette.colors.lavander};
             `}
           >
-            <span>Join Our Community</span>
+            <span>Rejoindre notre communauté</span>
           </SectionTitle>
           <p>
-            We love our users, that's why we have a dedicated Discord server
-            just to talk with all of them!
+            Nous adorons nos utilisateurs, voilà pourquoi nous avons un serveur Discord pour parler avec eux !
           </p>
           <Button
             css={`
@@ -75,7 +76,7 @@ const ChangeLogs = () => {
             `}
             type="primary"
             size="large"
-            href="https://discord.gg/4cGYzen"
+            href="https://discord.gg/HHJvj6yWRW"
           >
             <FontAwesomeIcon icon={faDiscord} />
             &nbsp; Discord

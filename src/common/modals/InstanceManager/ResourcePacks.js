@@ -286,8 +286,8 @@ const ResourcePacks = ({ instanceName }) => {
 
   const openFolderDialog = async () => {
     const dialog = await ipcRenderer.invoke('openFileDialog', [
-      { name: 'Resource Pack', extensions: ['zip'] },
-      { name: 'All', extensions: ['*'] }
+      { name: 'Pack de textures', extensions: ['zip'] },
+      { name: 'Tout', extensions: ['*'] }
     ]);
     if (dialog.canceled) return;
     const fileName = path.basename(dialog.filePaths[0]);
@@ -396,7 +396,7 @@ const ResourcePacks = ({ instanceName }) => {
             openFolderDialog();
           }}
         >
-          Add ResourcePack
+          Ajouter un pack de textures
         </Button>
       </Header>
 
@@ -406,7 +406,7 @@ const ResourcePacks = ({ instanceName }) => {
         fileList={resourcePacks}
       >
         {resourcePacks.length === 0 && (
-          <NotItemsAvailable>No ResourcePacks Available</NotItemsAvailable>
+          <NotItemsAvailable>Aucun pack de textures</NotItemsAvailable>
         )}
         <AutoSizer>
           {({ height, width }) => (

@@ -9,7 +9,7 @@ exports.initRPC = () => {
 
   activity = {
     details: 'Arkemys Client',
-    state: 'Ne fait rien',
+    state: 'Dans le launcher',
     startTimestamp: Math.floor(Date.now() / 1000),
     largeImageKey: 'default_big',
     largeImageText: 'Arkemys Client - LE Client Minecraft pour le PvP',

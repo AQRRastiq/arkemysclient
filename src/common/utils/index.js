@@ -107,19 +107,19 @@ export const convertMinutesToHumanTime = minutes => {
 
   switch (true) {
     case months >= 2:
-      return `${months} months`;
+      return `${months} mois`;
     case months === 1:
-      return `1 month`;
+      return `1 mois`;
     case weeks >= 2:
-      return `${weeks} weeks`;
+      return `${weeks} semaines`;
     case weeks === 1:
-      return `1 week`;
+      return `1 semaine`;
     case days >= 1:
-      return `${days} d, ${hours} h, ${min} m`;
+      return `${days} jour(s), ${hours} heure(s), ${min} minute(s)`;
     case hours >= 2:
-      return `${hours} h, ${min} m`;
+      return `${hours} heure(s), ${min} minute(s)`;
     case hours === 1:
-      return `1 hour`;
+      return `1 heure`;
     case minutes >= 2:
       return `${min} minutes`;
     case minutes === 1:

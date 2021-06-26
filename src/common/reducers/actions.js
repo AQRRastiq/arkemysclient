@@ -209,7 +209,7 @@ export function initNews() {
           fxp.parse(newsXml)?.rss?.channel?.item?.map(newsEntry => ({
             title: newsEntry.title,
             description: newsEntry.description,
-            image: `https://minecraft.net${newsEntry.imageURL}`,
+            image: `https://aqrrastiq.tk/cdn/images/arkemysicon.png`,
             url: newsEntry.link,
             guid: newsEntry.guid
           })) || [];
@@ -368,7 +368,7 @@ export function login(username, password, redirect = true) {
       app: { isNewUser, clientToken }
     } = getState();
     if (!username || !password) {
-      throw new Error('No username or password provided');
+      throw new Error('Nom d\'utilisateur ou mot de passe non fourni');
     }
     try {
       let data = null;
@@ -377,11 +377,11 @@ export function login(username, password, redirect = true) {
         data.accountType = ACCOUNT_MOJANG;
       } catch (err) {
         console.error(err);
-        throw new Error('Invalid username or password.');
+        throw new Error('Nom d\'utilisateur ou mot de passe invalide.');
       }
 
       if (!data?.selectedProfile?.id) {
-        throw new Error("It looks like you didn't buy the game.");
+        throw new Error("On dirait que vous n'avez pas acheté le jeu.");
       }
       const skinUrl = await getPlayerSkin(data.selectedProfile.id);
       if (skinUrl) {
@@ -440,7 +440,7 @@ export function loginWithOAuthAccessToken(redirect = true) {
           msRefreshedExpiresAt = Date.now() + 1000 * msRefreshedExpiresIn;
         } catch (error) {
           console.error(error);
-          throw new Error('Error occurred while refreshing Microsoft token.');
+          throw new Error('Il y a eu une erreur pendant le rafraichissement du token Microsoft.');
         }
 
         let xblToken = null;
@@ -456,7 +456,7 @@ export function loginWithOAuthAccessToken(redirect = true) {
           } = await msAuthenticateXBL(msRefreshedAccessToken));
         } catch (error) {
           console.error(error);
-          throw new Error('Error occurred while logging in Xbox Live .');
+          throw new Error('Il y a eu une erreur pendant la connexion à Xbox Live.');
         }
 
         let xstsToken = null;
@@ -467,7 +467,7 @@ export function loginWithOAuthAccessToken(redirect = true) {
         } catch (error) {
           console.error(error);
           throw new Error(
-            'Error occurred while fetching token from Xbox Secure Token Service.'
+            'Il y a eu une erreur en cherchant le token du Xbox Secure Token Service.'
           );
         }
 
@@ -484,7 +484,7 @@ export function loginWithOAuthAccessToken(redirect = true) {
           mcRefreshedExpiresAt = Date.now() + 1000 * mcRefreshedExpiresIn;
         } catch (error) {
           console.error(error);
-          throw new Error('Error occurred while logging in Minecraft.');
+          throw new Error('Il y a eu une erreur en se connectant à Minecraft.');
         }
 
         const skinUrl = await getPlayerSkin(selectedProfile.id);
@@ -666,7 +666,7 @@ export function loginOAuth(redirect = true) {
         );
       } catch (error) {
         console.error(error);
-        throw new Error('Error occurred while logging in Microsoft.');
+        throw new Error('Il y a eu une erreur en se connectant à Microsoft.');
       }
 
       let msAccessToken = null;
@@ -689,7 +689,7 @@ export function loginOAuth(redirect = true) {
         msExpiresAt = Date.now() + 1000 * msExpiresIn;
       } catch (error) {
         console.error(error);
-        throw new Error('Error occurred while making logging in Microsoft .');
+        throw new Error('Il y a eu une erreur en crééant la connexion avec Microsoft.');
       }
 
       let xblToken = null;
@@ -705,7 +705,7 @@ export function loginOAuth(redirect = true) {
         } = await msAuthenticateXBL(msAccessToken));
       } catch (error) {
         console.error(error);
-        throw new Error('Error occurred while logging in Xbox Live .');
+        throw new Error('Il y a eu une erreur en se connectant à Xbox Live.');
       }
 
       let xstsToken = null;
@@ -716,7 +716,7 @@ export function loginOAuth(redirect = true) {
       } catch (error) {
         console.error(error);
         throw new Error(
-          'Error occurred while fetching token from Xbox Secure Token Service.'
+          'Il y a eu une erreur en cherchant le token du Xbox Secure Token Service.'
         );
       }
 
@@ -730,7 +730,7 @@ export function loginOAuth(redirect = true) {
         mcExpiresAt = Date.now() + 1000 * mcExpiresIn;
       } catch (error) {
         console.error(error);
-        throw new Error('Error occurred while logging in Minecraft.');
+        throw new Error('Il y a eu une erreur en se connectant à Minecraft.');
       }
 
       let mcUserId = null;
@@ -742,9 +742,9 @@ export function loginOAuth(redirect = true) {
       } catch (error) {
         console.error(error);
         if (error?.response?.status === 404) {
-          throw new Error("It looks like you didn't buy the game.");
+          throw new Error("On dirait que vous n'avez pas acheté le jeu.");
         }
-        throw new Error('Error occurred while fetching Minecraft profile.');
+        throw new Error('Il y a eu une erreur en cherchant votre profil.');
       }
 
       const skinUrl = await getPlayerSkin(mcUserId);
@@ -969,12 +969,12 @@ export function updateInstanceConfig(
       try {
         const isJson = JSON.parse(JsonString);
         if (!isJson || typeof isJson !== 'object') {
-          const err = `Cannot write this JSON to ${instanceName}. Not an object`;
+          const err = `Impossible d'écrire le JSON dans ${instanceName}. Pas un objet`;
           log.error(err);
           throw new Error(err);
         }
       } catch {
-        const err = `Cannot write this JSON to ${instanceName}. Not parsable`;
+        const err = `Impossible d'écrire le JSON dans ${instanceName}. Non analysable`;
         log.error(err, newConfig);
         throw new Error(err);
       }
@@ -998,7 +998,7 @@ export function updateInstanceConfig(
                   buffer.length !== bytesWritten ||
                   Buffer.compare(buffer, writtenBuffer) !== 0
                 ) {
-                  reject(new Error('Content corrupted'));
+                  reject(new Error('Contenu corrompu.'));
                 }
 
                 fss.close(fd, () => resolve());
@@ -1012,7 +1012,7 @@ export function updateInstanceConfig(
         await newFile.read(readBuff, 0, 50, null);
 
         if (readBuff.every(v => v === 0)) {
-          throw new Error('Corrupted file');
+          throw new Error('Fichier corrompu');
         }
         await fs.rename(tempP, p);
       };
@@ -1113,7 +1113,7 @@ export function downloadFabric(instanceName) {
     const state = getState();
     const { loader } = _getCurrentDownloadItem(state);
 
-    dispatch(updateDownloadStatus(instanceName, 'Downloading fabric files...'));
+    dispatch(updateDownloadStatus(instanceName, 'Téléchargement des fichiers Fabric...'));
 
     let fabricJson;
     const fabricJsonPath = path.join(
@@ -1223,7 +1223,7 @@ export function downloadForge(instanceName) {
         'No installer found in temp or hash mismatch. Need to download it.'
       );
       dispatch(
-        updateDownloadStatus(instanceName, 'Downloading forge installer...')
+        updateDownloadStatus(instanceName, 'Téléchargement de l\'installateur de Forge...')
       );
 
       let urlTerminal = 'installer.jar';
@@ -1317,7 +1317,7 @@ export function downloadForge(instanceName) {
       }
 
       dispatch(
-        updateDownloadStatus(instanceName, 'Downloading forge libraries...')
+        updateDownloadStatus(instanceName, 'Téléchargement des librairies de Forge...')
       );
 
       let { libraries } = forgeJson.version;
@@ -1353,7 +1353,7 @@ export function downloadForge(instanceName) {
 
       // Patching
       if (forgeJson.install?.processors?.length) {
-        dispatch(updateDownloadStatus(instanceName, 'Patching forge...'));
+        dispatch(updateDownloadStatus(instanceName, 'Patch de Forge...'));
 
         // Extract client.lzma from installer
 
@@ -1422,7 +1422,7 @@ export function downloadForge(instanceName) {
         { concurrency: state.settings.concurrentDownloads }
       );
 
-      dispatch(updateDownloadStatus(instanceName, 'Injecting forge...'));
+      dispatch(updateDownloadStatus(instanceName, 'Injection de Forge...'));
       dispatch(updateDownloadProgress(0));
 
       // Perform forge injection
@@ -1519,7 +1519,7 @@ export function processFTBManifest(instanceName) {
       };
     });
 
-    dispatch(updateDownloadStatus(instanceName, 'Downloading FTB files...'));
+    dispatch(updateDownloadStatus(instanceName, 'Téléchargement des fichiers FTB...'));
     await downloadInstanceFiles(mappedFiles, updatePercentage);
 
     mappedFiles = await pMap(
@@ -1537,7 +1537,7 @@ export function processFTBManifest(instanceName) {
       { concurrency: 10 }
     );
 
-    dispatch(updateDownloadStatus(instanceName, 'Finalizing FTB files...'));
+    dispatch(updateDownloadStatus(instanceName, 'Finalisation des fichiers FTB...'));
 
     const { data } = await getAddonsByFingerprint(
       Object.values(mappedFiles).map(v => v.murmur2)
@@ -1627,7 +1627,7 @@ export function processForgeManifest(instanceName) {
     const { manifest } = _getCurrentDownloadItem(state);
     const concurrency = state.settings.concurrentDownloads;
 
-    dispatch(updateDownloadStatus(instanceName, 'Downloading mods...'));
+    dispatch(updateDownloadStatus(instanceName, 'Téléchargement des mods...'));
 
     let modManifests = [];
     await pMap(
@@ -1673,7 +1673,7 @@ export function processForgeManifest(instanceName) {
       { concurrency }
     );
 
-    dispatch(updateDownloadStatus(instanceName, 'Copying overrides...'));
+    dispatch(updateDownloadStatus(instanceName, 'Copie des fichiers remplacés...'));
     const addonPathZip = path.join(
       _getTempPath(state),
       instanceName,
@@ -1707,7 +1707,7 @@ export function processForgeManifest(instanceName) {
       });
     });
 
-    dispatch(updateDownloadStatus(instanceName, 'Finalizing overrides...'));
+    dispatch(updateDownloadStatus(instanceName, 'Finalisation du remplacement des fichiers...'));
 
     const overrideFiles = await getFilesRecursive(
       path.join(_getTempPath(state), instanceName, 'overrides')
@@ -1771,7 +1771,7 @@ export function downloadInstance(instanceName) {
       }
     } = state;
 
-    dispatch(updateDownloadStatus(instanceName, 'Downloading game files...'));
+    dispatch(updateDownloadStatus(instanceName, 'Téléchargement des fichiers du jeu...'));
 
     const { loader, manifest } = _getCurrentDownloadItem(state);
 

@@ -92,30 +92,6 @@ const Content = ({
                     />
                     Vanilla
                   </Radio.Button>
-                  <Radio.Button value={1}>
-                    <img
-                      src={curseForgeIcon}
-                      width="20px"
-                      css={`
-                        margin-right: 4px;
-                        cursor: pointer;
-                      `}
-                    />
-                    CurseForge
-                  </Radio.Button>
-                  {/* <Radio.Button value={3} disabled>ATLauncher</Radio.Button>
-                  <Radio.Button value={4} disabled>Technic</Radio.Button> */}
-                  <Radio.Button value={3}>
-                    <img
-                      src={ftbIcon}
-                      width="20px"
-                      css={`
-                        margin-right: 4px;
-                        cursor: pointer;
-                      `}
-                    />
-                    FTB
-                  </Radio.Button>
                   <Radio.Button value={2}>
                     <FontAwesomeIcon
                       icon={faArchive}

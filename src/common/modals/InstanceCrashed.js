@@ -53,14 +53,14 @@ const InstanceCrashed = ({ code, errorLogs }) => {
         height: 450px;
         width: 500px;
       `}
-      title="The instance could not be launched"
+      title="L'instance n'a pas pu être lancée"
     >
       <Container>
         <InnerContainer>
           <Logo size={100} />
           <h3>
-            OOPSIE WOOPSIE!!
-            <br /> A creeper blew this instance up!
+            C'EST PAS RÉGLO !
+            <br /> Un creeper a fait exploser cette instance !
           </h3>
         </InnerContainer>
         <Card
@@ -68,9 +68,9 @@ const InstanceCrashed = ({ code, errorLogs }) => {
             margin: 10px 0 20px 0;
           `}
         >
-          <h3>Error: </h3>
+          <h3>Erreur: </h3>
           <ErrorContainer>{calcError(code)}</ErrorContainer>
-          <h3>code: </h3>
+          <h3>Code: </h3>
           <ErrorContainer>{code}</ErrorContainer>
         </Card>
         <Collapse
@@ -89,8 +89,8 @@ const InstanceCrashed = ({ code, errorLogs }) => {
                   align-items: center;
                 `}
               >
-                <>Error Log</> &nbsp;
-                <Tooltip title={copiedLog ? 'Copied' : 'Copy'} placement="top">
+                <>Log de l'erreur</> &nbsp;
+                <Tooltip title={copiedLog ? 'Copié' : 'Copier'} placement="top">
                   <div
                     css={`
                       margin: 0;

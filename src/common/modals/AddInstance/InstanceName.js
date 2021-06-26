@@ -233,10 +233,10 @@ const InstanceName = ({
           await new Promise((resolve, reject) => {
             dispatch(
               openModal('ActionConfirmation', {
-                message: `At least ${data?.specs?.minimum}MB of RAM are required to play this modpack and you only have ${userMemory}MB. You might still be able to play it but probably with low performance. Do you want to continue?`,
+                message: `Au moins ${data?.specs?.minimum}MB de RAM sont oubligatoires pour jouer mais vous n'avez que ${userMemory}MB. Vous pouvez toujours y jouer mais il pourra y avoir de basse performances. Voulez-vous continuer ?`,
                 confirmCallback: () => resolve(),
                 abortCallback: () => reject(),
-                title: 'Low Memory Warning'
+                title: 'Attention : RAM insuffisante'
               })
             );
           });
@@ -424,9 +424,9 @@ const InstanceName = ({
                       `}
                     >
                       {invalidName &&
-                        'Instance name is not valid or too long. Please try another one'}
+                        'Ce nom d\'instance est invalide ou est trop long.'}
                       {alreadyExists &&
-                        'An instance with this name already exists!'}
+                        'Il existe déjà une instance avec ce nom !'}
                     </div>
                   </div>
                 </div>

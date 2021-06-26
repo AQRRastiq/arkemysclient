@@ -228,7 +228,7 @@ const Login = () => {
             <Header>
               <HorizontalLogo size={200} />
             </Header>
-            <p>Sign in with your Mojang Account</p>
+            <p>Se connecter avec votre compte Mojang</p>
             <Form>
               <div>
                 <Input
@@ -239,7 +239,7 @@ const Login = () => {
               </div>
               <div>
                 <Input
-                  placeholder="Password"
+                  placeholder="Mot de passe"
                   type="password"
                   value={password}
                   onChange={({ target: { value } }) => setPassword(value)}
@@ -261,7 +261,7 @@ const Login = () => {
                 color="primary"
                 onClick={authenticateMicrosoft}
               >
-                Sign in with Microsoft
+                Se connecter avec Microsoft
                 <FontAwesomeIcon
                   css={`
                     margin-left: 6px;
@@ -282,12 +282,12 @@ const Login = () => {
                 <FooterLinks>
                   <div>
                     <a href="https://my.minecraft.net/en-us/store/minecraft/#register">
-                      CREATE AN ACCOUNT
+                      CRÉÉR UN COMPTE
                     </a>
                   </div>
                   <div>
                     <a href="https://my.minecraft.net/en-us/password/forgot/">
-                      FORGOT PASSWORD
+                      MOT DE PASSE OUBLIÉ
                     </a>
                   </div>
                 </FooterLinks>
@@ -313,7 +313,7 @@ const Login = () => {
               <source src={backgroundVideo} type="video/webm" />
             </video>
           </Background>
-          <Loading transitionState={transitionState}>Loading...</Loading>
+          <Loading transitionState={transitionState}>Chargement...</Loading>
         </Container>
       )}
     </Transition>

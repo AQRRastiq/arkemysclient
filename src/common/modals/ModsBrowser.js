@@ -255,7 +255,7 @@ const ModsListWrapper = ({
 
                   if (preferredFile === null) {
                     setLoading(false);
-                    setError('Mod Not Available');
+                    setError('Mod non disponible');
                     console.error(
                       `Could not find any release candidate for addon: ${item?.id} / ${gameVersion}`
                     );
@@ -407,7 +407,7 @@ const ModsBrowser = ({ instanceName, gameVersion }) => {
         itemsNumber,
         isReset ? 0 : mods.length,
         filterType,
-        filterType !== 'Author' && filterType !== 'Name',
+        filterType !== 'Auteur' && filterType !== 'Nom',
         gameVersion,
         getPatchedInstanceType(instance) === FABRIC ? 4780 : null
       ));
@@ -439,7 +439,7 @@ const ModsBrowser = ({ instanceName, gameVersion }) => {
         width: 90%;
         max-width: 1500px;
       `}
-      title="Instance Manager"
+      title="Modification d'instance"
     >
       <Container>
         <Header>
@@ -453,12 +453,12 @@ const ModsBrowser = ({ instanceName, gameVersion }) => {
             disabled={areModsLoading}
             virtual={false}
           >
-            <Select.Option value="Featured">Featured</Select.Option>
-            <Select.Option value="Popularity">Popularity</Select.Option>
-            <Select.Option value="LastUpdated">Last Updated</Select.Option>
-            <Select.Option value="Name">Name</Select.Option>
-            <Select.Option value="Author">Author</Select.Option>
-            <Select.Option value="TotalDownloads">Downloads</Select.Option>
+            <Select.Option value="Featured">En vedette</Select.Option>
+            <Select.Option value="Popularity">Popularité</Select.Option>
+            <Select.Option value="LastUpdated">Dernière mise à jour</Select.Option>
+            <Select.Option value="Name">Nom</Select.Option>
+            <Select.Option value="Author">Auteur</Select.Option>
+            <Select.Option value="TotalDownloads">Téléchargements</Select.Option>
           </Select>
           <Input
             css={`
@@ -492,7 +492,7 @@ const ModsBrowser = ({ instanceName, gameVersion }) => {
                   margin-top: 70px;
                 `}
               >
-                No mods has been found with the current filters.
+                Aucun mod n'a été trouvé avec les filtres.
               </div>
             </div>
           ) : (
@@ -531,7 +531,7 @@ const ModsBrowser = ({ instanceName, gameVersion }) => {
                 margin-top: 70px;
               `}
             >
-              An error occurred while loading the mods list...
+              Il y a eu une erreur en chargant les mods...
             </div>
           </div>
         )}

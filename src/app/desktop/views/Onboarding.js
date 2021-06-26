@@ -8,7 +8,7 @@ import {
   faLongArrowAltUp,
   faLongArrowAltDown
 } from '@fortawesome/free-solid-svg-icons';
-import backgroundVideo from '../../../common/assets/onboarding.webm';
+import backgroundVideo from '../../../common/assets/onboarding.png';
 import { _getCurrentAccount } from '../../../common/utils/selectors';
 import BisectHosting from '../../../ui/BisectHosting';
 import { openModal } from '../../../common/reducers/modals/actions';
@@ -100,7 +100,7 @@ const Home = () => {
               height: 100vh;
             `}
           >
-            <source src={backgroundVideo} type="video/webm" />
+            <source src={backgroundVideo} type="image/png" />
           </video>
         </div>
       </div>
@@ -124,7 +124,7 @@ const Home = () => {
             padding: 0 120px;
           `}
         >
-          {account.selectedProfile.name}, welcome to Arkemys Client!
+          {account.selectedProfile.name}, bienvenue sur le Arkemys Client!
         </div>
       </div>
       <div
@@ -147,9 +147,8 @@ const Home = () => {
             margin: 20% 10%;
           `}
         >
-          Arkemys Client is completely free and open source. <br />
-          If you want to support us, consider renting a server on BisectHosting,
-          our official partner!
+          Arkemys Client est complètement gratuit et open source. <br />
+          Si vous voulez nous supporter vous pouvez rejoindre notre serveur Minecraft officiel !
           <br />
           <br />
           <div
@@ -157,11 +156,6 @@ const Home = () => {
               cursor: pointer;
             `}
           >
-            <BisectHosting
-              showPointerCursor
-              size={100}
-              onClick={() => dispatch(openModal('BisectHosting'))}
-            />
           </div>
         </div>
       </div>
@@ -185,18 +179,18 @@ const Home = () => {
             margin: 20%;
           `}
         >
-          Or you can also support us through Patreon.
+          Ou vous pouvez nous supporter via Patreon.
           <div
             css={`
               margin: 40px;
             `}
           >
-            <a href="https://www.patreon.com/aqrrastiq">
+            <a href="https://www.patreon.com/aqr_rastiq">
               <img
                 css={`
                   cursor: pointer;
                 `}
-                alt="Become a Patron"
+                alt="Devenir un Patron"
                 src="https://gdevs.io/img/become_a_patron_button.png"
               />
             </a>
@@ -227,13 +221,12 @@ const Home = () => {
             margin: 20%;
           `}
         >
-          Also, don&apos;t forget to join us on Discord! This is where our
-          community is!
+          Aussi, n&apos;oubliez pas de rejoindre notre Discord ! C&apos;est là que notre communauté se situe !
           <iframe
             css={`
               margin-top: 40px;
             `}
-            src="https://discordapp.com/widget?id=398091532881756161&theme=dark"
+            src="https://discord.com/widget?id=849694235569553438&theme=dark"
             width="350"
             height="410"
             allowTransparency="true"

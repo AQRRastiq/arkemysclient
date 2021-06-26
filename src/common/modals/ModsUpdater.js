@@ -69,10 +69,10 @@ const ModsUpdater = ({ instanceName }) => {
         height: 160px;
         width: 350px;
       `}
-      title="Mods Updater"
+      title="Mise à jour de Mod"
     >
       <Container>
-        Updating mod {computedMods} / {totalMods.length}
+        Mise à jour du mod {computedMods} / {totalMods.length}
         {installProgress !== null && (
           <Progress percent={parseInt(installProgress, 10)} />
         )}

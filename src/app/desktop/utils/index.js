@@ -167,7 +167,7 @@ export const getFilteredVersions = (
   const versions = [
     {
       value: 'vanilla',
-      label: 'Vanilla',
+      label: 'Arkemys',
       children: [
         {
           value: 'release',
@@ -177,82 +177,6 @@ export const getFilteredVersions = (
             .map(v => ({
               value: v.id,
               label: v.id
-            }))
-        },
-        {
-          value: 'snapshot',
-          label: 'Snapshots',
-          children: vanillaManifest.versions
-            .filter(v => v.type === 'snapshot')
-            .map(v => ({
-              value: v.id,
-              label: v.id
-            }))
-        },
-        {
-          value: 'old_beta',
-          label: 'Old Beta',
-          children: vanillaManifest.versions
-            .filter(v => v.type === 'old_beta')
-            .map(v => ({
-              value: v.id,
-              label: v.id
-            }))
-        },
-        {
-          value: 'old_alpha',
-          label: 'Old Alpha',
-          children: vanillaManifest.versions
-            .filter(v => v.type === 'old_alpha')
-            .map(v => ({
-              value: v.id,
-              label: v.id
-            }))
-        }
-      ]
-    },
-    {
-      value: 'forge',
-      label: 'Forge',
-      children: Object.entries(forgeManifest).map(([k, v]) => ({
-        value: k,
-        label: k,
-        children: v.sort(sortByForgeVersionDesc).map(child => ({
-          value: child,
-          label: child.split('-')[1]
-        }))
-      }))
-    },
-    {
-      value: 'fabric',
-      label: 'Fabric',
-      children: [
-        {
-          value: 'release',
-          label: 'Releases',
-          children: fabricManifest.game
-            .filter(v => v.stable)
-            .map(v => ({
-              value: v.version,
-              label: v.version,
-              children: fabricManifest.loader.map(c => ({
-                value: c.version,
-                label: c.version
-              }))
-            }))
-        },
-        {
-          value: 'snapshot',
-          label: 'Snapshots',
-          children: fabricManifest.game
-            .filter(v => !v.stable)
-            .map(v => ({
-              value: v.version,
-              label: v.version,
-              children: fabricManifest.loader.map(c => ({
-                value: c.version,
-                label: c.version
-              }))
             }))
         }
       ]

@@ -38,10 +38,10 @@ const ModChangelog = ({ modpackId, files, type, modpackName }) => {
       return '';
     }
     if (loading) {
-      return 'Loading';
+      return 'Chargement';
     }
     if (!changelog) {
-      return 'Missing changelog';
+      return 'Changelog introuvable';
     }
   };
 
@@ -72,7 +72,7 @@ const ModChangelog = ({ modpackId, files, type, modpackName }) => {
             setSelectedId(v);
             loadChangelog(v);
           }}
-          placeholder="Select a version"
+          placeholder="Selectionner une version"
           virtual={false}
         >
           {(files || []).map(v => (

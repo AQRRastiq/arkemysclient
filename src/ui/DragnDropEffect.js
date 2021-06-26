@@ -227,7 +227,7 @@ const DragnDropEffect = ({
                   `}
                   onDragLeave={e => e.stopPropagation()}
                 >
-                  <CopyTitle>Copy</CopyTitle>
+                  <CopyTitle>Copier</CopyTitle>
                   <DragArrow icon={faArrowDown} size="3x" />
                 </div>
               )}

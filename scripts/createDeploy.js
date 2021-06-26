@@ -102,8 +102,8 @@ const createDeployFiles = async () => {
 const commonConfig = {
   config: {
     publish: {
-      owner: 'gorilla-devs',
-      repo: 'Arkemys Client',
+      owner: 'AQRRastiq',
+      repo: 'arkemysclient',
       provider: 'github',
       private: false
     },

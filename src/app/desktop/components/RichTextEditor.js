@@ -12,9 +12,9 @@ const Overview = () => {
   return (
     <>
       <Options>
-        <div>Bold</div>
+        <div>Gras</div>
       </Options>
-      <textarea placeholder="Type your notes here!!" />
+      <textarea placeholder="Écrivez vos notes ici !" />
     </>
   );
 };
