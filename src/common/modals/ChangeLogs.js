@@ -52,8 +52,7 @@ const ChangeLogs = () => {
           </SectionTitle>
           <div>
             <ul>
-              <li>Fix de la taille des logos.</li>
-              <li>Phrases de connexion fixées.</li>
+              <li>Y'a trop de fixs. C'est tout.</li>
             </ul>
           </div>
         </Section>

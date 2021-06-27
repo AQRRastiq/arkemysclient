@@ -76,7 +76,7 @@ const JavaSetup = () => {
                     setChoice(0);
                   }}
                 >
-                  Installation automatique
+                  Automatique
                 </Button>
               </div>
               <div>
@@ -90,7 +90,7 @@ const JavaSetup = () => {
                     setChoice(1);
                   }}
                 >
-                  Installation manuelle
+                  Manuel
                 </Button>
               </div>
             </div>

@@ -17,7 +17,7 @@ const Logo = styled.svg`
 
 const HorizontalLogo = ({ size, pointer, onClick }) => {
   return (
-    <img src="footer_644x196.png"></img>
+    <img src="https://aqrrastiq.tk/cdn/images/footer_644x196.png"></img>
   );
 };
 
