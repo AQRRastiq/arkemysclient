@@ -249,7 +249,7 @@ const Login = () => {
                 <LoginFailMessage>{loginFailed?.message}</LoginFailMessage>
               )}
               <LoginButton color="primary" onClick={authenticate}>
-                Sign In
+                Connexion
                 <FontAwesomeIcon
                   css={`
                     margin-left: 6px;
@@ -261,7 +261,7 @@ const Login = () => {
                 color="primary"
                 onClick={authenticateMicrosoft}
               >
-                Se connecter avec Microsoft
+                Connexion MS
                 <FontAwesomeIcon
                   css={`
                     margin-left: 6px;

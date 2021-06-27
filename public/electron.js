@@ -413,7 +413,7 @@ ipcMain.handle(
       };
 
       const oAuthWindow = new BrowserWindow({
-        title: 'Sign in to your Microsoft account',
+        title: 'Connexion via Microsoft',
         show: false,
         parent: mainWindow,
         autoHideMenuBar: true,

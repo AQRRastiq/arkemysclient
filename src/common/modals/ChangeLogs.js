@@ -52,9 +52,8 @@ const ChangeLogs = () => {
           </SectionTitle>
           <div>
             <ul>
-              <li>Traduction des phrases.</li>
-              <li>Changement du manifest des version de Minecraft.</li>
-              <li>Changement du logo.</li>
+              <li>Fix de la taille des logos.</li>
+              <li>Phrases de connexion fixées.</li>
             </ul>
           </div>
         </Section>

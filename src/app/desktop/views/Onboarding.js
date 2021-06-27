@@ -100,7 +100,7 @@ const Home = () => {
               height: 100vh;
             `}
           >
-            <source src={backgroundVideo} type="image/png" />
+            <img src={backgroundVideo}/>
           </video>
         </div>
       </div>

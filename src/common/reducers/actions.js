@@ -209,7 +209,7 @@ export function initNews() {
           fxp.parse(newsXml)?.rss?.channel?.item?.map(newsEntry => ({
             title: newsEntry.title,
             description: newsEntry.description,
-            image: `https://aqrrastiq.tk/cdn/images/arkemysicon.png`,
+            image: `https://minecraft.net${newsEntry.imageURL}`,
             url: newsEntry.link,
             guid: newsEntry.guid
           })) || [];
