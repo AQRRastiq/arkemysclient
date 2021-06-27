@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 const Logo = ({ size, pointerCursor }) => {
   return (
-    <img src="https://aqrrastiq.tk/cdn/images/arkemysicon_512x512.png"></img>
+    <img src="https://raw.githubusercontent.com/AQRRastiq/arkemysclient/main/src/ui/arkemysicon_512x512.png"></img>
   );
 };
 

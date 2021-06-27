@@ -54,7 +54,7 @@ const JavaSetup = () => {
                 text-align: justify;
               `}
             >
-              Pour une expérience optimale, nous vous conseillons de laisser le Arkemys Client installer Jav pour vous à moins que vous sachiez ce que vous faites.
+              Pour une expérience optimale, nous vous conseillons de laisser le Arkemys Client installer Java pour vous à moins que vous sachiez ce que vous faites.
             </div>
             <div
               css={`
