@@ -8,7 +8,7 @@ import {
   faLongArrowAltUp,
   faLongArrowAltDown
 } from '@fortawesome/free-solid-svg-icons';
-import backgroundVideo from '../../../common/assets/onboarding.png';
+import backgroundVideo from '../../../common/assets/onboarding.webm';
 import { _getCurrentAccount } from '../../../common/utils/selectors';
 import BisectHosting from '../../../ui/BisectHosting';
 import { openModal } from '../../../common/reducers/modals/actions';
@@ -100,7 +100,7 @@ const Home = () => {
               height: 100vh;
             `}
           >
-            <img src={backgroundVideo}/>
+            <source src={backgroundVideo} type="video/webm" />
           </video>
         </div>
       </div>

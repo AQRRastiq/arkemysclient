@@ -17,7 +17,7 @@ const Logo = styled.svg`
 
 const HorizontalLogo = ({ size, pointer, onClick }) => {
   return (
-    <img src="https://raw.githubusercontent.com/AQRRastiq/arkemysclient/main/src/ui/footer_644x196.png"></img>
+    <img src="https://raw.githubusercontent.com/AQRRastiq/arkemysclient/main/src/ui/footer_50.png"></img>
   );
 };
 
