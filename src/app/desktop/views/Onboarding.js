@@ -8,7 +8,6 @@ import {
   faLongArrowAltUp,
   faLongArrowAltDown
 } from '@fortawesome/free-solid-svg-icons';
-import backgroundVideo from '../../../common/assets/onboarding.webm';
 import { _getCurrentAccount } from '../../../common/utils/selectors';
 import BisectHosting from '../../../ui/BisectHosting';
 import { openModal } from '../../../common/reducers/modals/actions';
@@ -93,15 +92,7 @@ const Home = () => {
             align-items: center;
           `}
         >
-          <video
-            autoPlay
-            muted
-            css={`
-              height: 100vh;
-            `}
-          >
-            <source src={backgroundVideo} type="video/webm" />
-          </video>
+          <img src="https://raw.githubusercontent.com/AQRRastiq/arkemysclient/main/src/ui/footer.png"></img>
         </div>
       </div>
       <div

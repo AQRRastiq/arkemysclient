@@ -21,7 +21,7 @@
     ClearErrors
     ${ifNot} ${isUpdated}
 
-        MessageBox MB_YESNO "Also delete all your user data? (instances, preferences...)" IDNO Skipped IDYES Accepted
+        MessageBox MB_YESNO "Aussi supprimer les données utilisateur ? (instances, paramètres...)" IDNO Skipped IDYES Accepted
 
         Accepted:
             FileOpen $4 "$APPDATA\arkemysclient_next\override.data" r
