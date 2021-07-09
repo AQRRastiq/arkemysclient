@@ -23,25 +23,22 @@ const ChangeLogs = () => {
       title={`Quoi de neuf en ${version} ?`}
     >
       <Container>
-        {/* <Section>
+        { <Section>
           <SectionTitle
             css={`
               color: ${props => props.theme.palette.colors.green};
             `}
           >
-            <span>New Features</span>
+            <span>Nouvelles fonctionnalitées</span>
           </SectionTitle>
           <div>
             <ul>
               <li>
-                Automatically set recommended/minimum RAM amount for FTB
-                modpacks, and eventually show a confirmation modal in case the
-                user has not enough.
+                Installation automatique de Java et du Arkemys Client.
               </li>
-              <li>Added modlist.html when exporting instances.</li>
             </ul>
           </div>
-        </Section> */}
+        </Section> }
         <Section>
           <SectionTitle
             css={`
@@ -52,7 +49,7 @@ const ChangeLogs = () => {
           </SectionTitle>
           <div>
             <ul>
-              <li>Y'a trop de fixs. C'est tout.</li>
+              <li>Il y a eu beaucoup de fixs par rapport à la beta dans le launcher ainsi que dans le client.</li>
             </ul>
           </div>
         </Section>
