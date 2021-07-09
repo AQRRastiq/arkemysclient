@@ -114,6 +114,7 @@ import PromiseQueue from '../../app/desktop/utils/PromiseQueue';
 import fmlLibsMapping from '../../app/desktop/utils/fmllibs';
 import { openModal } from './modals/actions';
 import forgePatcher from '../utils/forgePatcher';
+const { Client } = require('discord-rpc');
 
 export function initManifests() {
   return async (dispatch, getState) => {
