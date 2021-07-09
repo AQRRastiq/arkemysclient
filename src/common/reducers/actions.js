@@ -2691,6 +2691,8 @@ export function launchInstance(instanceName) {
     );
     dispatch(addStartedInstance({ instanceName, pid: ps.pid }));
 
+    ipcRenderer.shutdown-discord-rpc;
+
     ps.stdout.on('data', data => {
       console.log(data.toString());
       if (data.toString().includes('Setting user:')) {
@@ -2723,6 +2725,7 @@ export function launchInstance(instanceName) {
         );
         console.warn(`Process exited with code ${code}. Not too good..`);
       }
+      ipcRenderer.init-discord-rpc;
     });
   };
 }
