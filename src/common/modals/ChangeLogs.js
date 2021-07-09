@@ -71,7 +71,7 @@ const ChangeLogs = () => {
             `}
             type="primary"
             size="large"
-            href="https://discord.gg/HHJvj6yWRW"
+            href="https://discord.gg/8xf72rxEv4"
           >
             <FontAwesomeIcon icon={faDiscord} />
             &nbsp; Discord
