@@ -32,7 +32,7 @@ export const CURSEFORGE_URL = 'https://www.curseforge.com';
 export const MICROSOFT_LIVE_LOGIN_URL = 'https://login.live.com';
 export const MICROSOFT_XBOX_LOGIN_URL = 'https://user.auth.xboxlive.com';
 export const MICROSOFT_XSTS_AUTH_URL = 'https://xsts.auth.xboxlive.com';
-export const MICROSOFT_OAUTH_CLIENT_ID = 'd0d09e36-ec4d-4a9a-8e8a-917c4ca85b08';
+export const MICROSOFT_OAUTH_CLIENT_ID = 'b9336bf8-c6bb-4344-aabe-63d0bfa8db2e';
 export const MICROSOFT_OAUTH_REDIRECT_URL =
   'https://login.microsoftonline.com/common/oauth2/nativeclient';
 export const MINECRAFT_SERVICES_URL = 'https://api.minecraftservices.com';

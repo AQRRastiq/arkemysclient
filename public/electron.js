@@ -389,7 +389,7 @@ ipcMain.handle(
       );
       msAuthorizeUrl.searchParams.set(
         'cobrandid',
-        '5fefb907-dc94-42e4-92f2-20a6809078c9'
+        '8058f65d-ce06-4c30-9559-473c9275a65d'
       );
 
       const handleRedirect = (url, authWindow) => {
